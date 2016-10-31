@@ -1,0 +1,4 @@
+Hello!
+This app started as a learning exercise for Redux and became something much more interesting.
+Feel free to take a look around, remember to enter 'help' for a list of commands.
+- Jesse

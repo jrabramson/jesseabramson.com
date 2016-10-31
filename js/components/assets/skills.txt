@@ -1,0 +1,7 @@
+Back End    Front End
+ PHP		 CSS5
+ Ruby		 JS
+ Python		  - Meteor
+ Node		  - React [reflux/redux]
+ Java		  - Angular
+ C#  		  

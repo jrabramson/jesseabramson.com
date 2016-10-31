@@ -1,0 +1,183 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+* {box-sizing: border-box;}
+
+*{
+	padding:0;
+	margin:0;
+
+}
+*::selection {
+ 	background: #999;
+}
+*::-moz-selection {
+  	background: #999;
+}
+body{
+	font-family: "Ubuntu", sans-serif;
+	font-size: 100%;
+	background:#232323;
+}
+
+a{
+	text-decoration: none;
+	color:#666;
+}
+	a:hover{
+		color:#999;
+	}
+p{
+	line-height: 2em;
+	margin:0 0 20px;
+	text-align: center;
+}
+.endmark{color: #E0C044;}
+.wrap{
+	max-width: 70%;
+	margin:100px auto;
+}
+#typed {color: #E0C044;}
+.type-wrap{
+	margin:10px auto;
+	padding:20px;
+	background:#f0f0f0;
+	border-radius:5px;
+	border:#CCC 1px solid;
+}
+
+.links{
+	margin:20px 0;
+	font-size: 0.75em;
+	text-align: center;
+}
+
+h1 {font-family: 'Ubuntu Mono'; font-weight: normal; font-size: 40px; line-height:80px; color: #fff; letter-spacing: 1px;}
+h2 {font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing:1px;color: #FF9702;}
+h2 span:first-child {color: #89D402;}
+h2 span {color: #FFF;}
+h3 {padding: 20px 0 20px 30px; color:#fff;font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing: 0.75px;}
+p {color:#999;font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing: 0.5px; font-size: 18px; line-height: 28px; text-align: left; position: relative; top: 40px;}
+p strong{font-weight: normal;font-style: italic;}
+p a {color: #ccc; transition:0.5s all;-webkit-transition:0.5s all; padding-bottom: 2px;
+	border-bottom: 2px solid #ccc;}
+p a:hover{color:#E0C044;}
+.var {font-style: italic; color: #54D9F1;}
+.with {color: #1DF772;}
+.white {color:#fff;}
+
+
+.social-icons {
+  display: inline-block;
+  text-align: center;
+  float: right;
+  position: relative;
+  top: -80px;
+}
+
+.icon-link {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 6px;
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  fill: #eee;
+}
+
+.icon-hover {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(0px at center);
+  -webkit-clip-path: circle(0px at center);
+  fill: #E0C044;
+  transition: 1s ease;
+}
+.icon-hover:hover {
+  clip-path: circle(100% at center);
+  -webkit-clip-path: circle(100% at center);
+}
+
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.fadeIn2 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-delay: 1.25s;
+	animation-delay: 1.25s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.fadeIn3 {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-delay: 2s;
+	animation-delay: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+.fadeIn4 {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-delay: 4s;
+	animation-delay: 4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+.inivisble {
+	color: #232323;
+}
+
+
+
+
+
+
+
+
+
+
