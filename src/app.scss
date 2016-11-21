@@ -1,0 +1,314 @@
+.monitor {
+  background: #3c3a3a;
+  width: 100%;
+  position: relative;
+  height: 500px;
+  border: 1px solid #8e7979;
+  border-radius: 2rem;
+}
+
+#terminalwrap {
+  border: 1px solid #8e7979;
+  width: 90%;
+  height: 430px;
+  position: relative;
+  margin: auto auto;
+  top: 20px;
+  overflow: hidden;
+
+  background-color: black;
+  border-radius: 2rem;
+  border: 1rem solid;
+  border-bottom-color: #121212;
+  border-left-color: #080808;
+  border-right-color: #080808;
+  border-top-color: #020202;
+  box-shadow:
+    inset 0 0 18rem black,
+    inset 0 0 3rem black,
+    0 0 10rem black;
+  height: 96%;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  width: 98%;
+}
+
+#terminal {
+  height: 100%;
+  width: 100%;
+  background: black;
+  box-shadow: 2px 2px 2px 2px black, -2px -2px 2px 2px black;
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+  overflow: auto;
+
+  .input {
+    display: none;
+    padding: 2px 0;
+    overflow: hidden;
+  }
+
+  .location {
+    float: left;
+    color: white;
+    font-family: 'Ubuntu Mono';
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    position: relative;
+    display: none;
+    margin-right: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  input[type="text"] {
+    background-color: black;
+    border: none;
+    color: white;
+    outline: none;
+    width: 100%;
+  }
+}
+
+.pre {
+  white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px; font-family: 'Open Sans', sans-serif;  font-weight: 300; line-height: 18px;  padding: 10px;
+}
+
+.error {
+  color: #C35858;
+}
+
+.line {
+
+}
+
+.comment {
+  list-style: none;
+  color: #808080;
+}
+
+.help {}
+.file {}
+
+.dir {
+  color: lightblue;
+}
+
+.view {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.link {
+  color: blue;
+}
+
+$rudy-accent-color: #00C853;
+$rudy-accent-color-fallback-1: #00E676;
+$rudy-accent-color-fallback-2: #69F0AE;
+
+#terminal {
+
+  position: relative;
+  animation: flicker 0.15s infinite;
+  animation: turn-on 4s linear;
+  animation-fill-mode: forwards;
+
+  @mixin terminal-navbar-absolute {
+    content: '';
+    position: absolute;
+  }
+
+  @mixin terminal-navbar-fixed {
+  }
+
+  @include terminal-navbar-fixed;
+  z-index: 4000;
+
+  &:before {
+    @include terminal-navbar-absolute;
+    z-index: 4010;
+    background: -webkit-linear-gradient(#444 50%, #000 50%);
+    background: linear-gradient(#444 50%, #000 50%);
+    background-size: 100% 4px;
+    background-repeat: repeat-y;
+    opacity: .14;
+    box-shadow : inset 0px 0px 1px 1px rgba(0, 0, 0, .8);
+    -webkit-animation: pulse 5s linear infinite;
+    animation: pulse 5s linear infinite;
+  }
+
+  &:after {
+    @include terminal-navbar-absolute;
+    z-index : 4011;
+    background-color : $rudy-accent-color;
+    background: -webkit-radial-gradient(center, rgba(0,0,0,1) 0%,rgba(0,0,0,0.62) 45%,rgba(0,9,4,0.6) 47%,$rudy-accent-color 100%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%,rgba(0,0,0,0.62) 45%,rgba(0,9,4,0.6) 47%,$rudy-accent-color 100%);
+    box-shadow : inset 0px 0px 4px 4px rgba(100, 100, 100, .5);
+    opacity : .1;
+  }
+
+  .overlay {
+    @include terminal-navbar-fixed;
+    z-index: 4100;
+
+    position: absolute;
+    top: 0;
+    z-index: 4100;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &:before {
+      content : '';
+      position : absolute;
+      top : 0px;
+      width : 100%;
+      height : 5px;
+      background : #fff;
+      background: -webkit-linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(255,250,250,1) 50%,rgba(255,255,255,0.98) 51%,rgba(255,0,0,0) 100%);
+      background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgba(255,250,250,1) 50%,rgba(255,255,255,0.98) 51%,rgba(255,0,0,0) 100%);
+      opacity : .1;
+      -webkit-animation: vline 1.25s linear infinite;
+      animation: vline 1.25s linear infinite;
+    }
+
+    &:after {
+      @include terminal-navbar-absolute;
+      box-shadow: 0 2px 6px rgba(25,25,25,0.2),
+                  inset 0 1px rgba(50,50,50,0.1),
+                  inset 0 3px rgba(50,50,50,0.05),
+                  inset 0 3px 8px rgba(64,64,64,0.05),
+                  inset 0 -5px 10px rgba(25,25,25,0.1);
+    }
+  }
+}
+
+@keyframes flicker {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      opacity: random();
+    }
+  }
+}
+
+@keyframes turn-on{
+  0%{
+    opacity: 0;
+  }
+  29%{
+    background: black;
+    opacity: 1;
+    transform: none;
+    color: black !important;
+  }
+  30%{
+    background: white;
+    transform:scale(1,0.8) translate3d(0,0,0);
+    -webkit-filter:brightness(30);
+    filter:brightness(30);
+    opacity:1;
+  }
+  33.5%{
+    transform:scale(1,0.8) translate3d(0,100%,0);
+  }
+  33.6%{
+    transform:scale(1,0.8) translate3d(0,-100%,0);
+    opacity:1;
+  }
+  39%{
+    background: white;
+    transform:scale(1.3,0.6) translate3d(0,100%,0);
+    -webkit-filter:brightness(30);
+    filter:brightness(30);
+    opacity:0;
+  }
+  41%{
+    background: black;
+    transform:scale(1,1) translate3d(0,0,0);
+    -webkit-filter:contrast(0) brightness(0) ;
+    filter:contrast(0) brightness(0);
+    opacity:0;
+  }
+  100%{
+    background: black;
+    transform:scale(1,1) translate3d(0,0,0);
+    -webkit-filter:contrast(1) brightness(1.1) saturate(1.1);
+    filter:contrast(1) brightness(1.1) saturate(1.1);
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes vline {
+  0%   { top: 0px;}
+  100% { top: 100%;}
+}
+
+@-webkit-keyframes pulse {
+  0%   {-webkit-transform: scale(1.001);  opacity: .14; }
+  8%   {-webkit-transform: scale(1.000);  opacity: .13; }
+  15%  {-webkit-transform: scale(1.004);  opacity: .14; }
+  30%  {-webkit-transform: scale(1.002);  opacity: .11; }
+  100% {-webkit-transform: scale(1.000);  opacity: .14; }
+}
+
+@-webkit-keyframes glitch {
+  0%   {-webkit-transform: scale(1, 1.002); }
+  50%  {-webkit-transform: scale(1, 1.0001); }
+  100% {-webkit-transform: scale(1.001, 1); }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: $rudy-accent-color; }
+}
+
+@-webkit-keyframes typing {
+  from { width: 100%; }
+  to { width: 0; }
+}
+
+@keyframes vline {
+  0%   { top: 0px;}
+  100% { top: 100%;}
+}
+
+@keyframes pulse {
+  0%   {transform: scale(1.001);  opacity: .14; }
+  8%   {transform: scale(1.000);  opacity: .13; }
+  15%  {transform: scale(1.004);  opacity: .14; }
+  30%  {transform: scale(1.002);  opacity: .11; }
+  100% {transform: scale(1.000);  opacity: .14; }
+}
+
+@keyframes glitch {
+  0%   {transform: scale(1, 1.002); }
+  50%   {transform: scale(1, 1.0001); }
+  100% {transform: scale(1.001, 1); }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: $rudy-accent-color; }
+}
+
+@keyframes typing {
+  from { width: 100%; }
+  to { width: 0; }
+}

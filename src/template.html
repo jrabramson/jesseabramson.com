@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jesse Abramson</title>
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+  <!-- <link href="./../css/app.css" rel="stylesheet" type="text/css" /> -->
+  <style>
+  /*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+* {box-sizing: border-box;}
+
+*{
+  padding:0;
+  margin:0;
+
+}
+*::selection {
+  background: #999;
+}
+*::-moz-selection {
+    background: #999;
+}
+body{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 100%;
+  background:#232323;
+}
+
+a{
+  text-decoration: none;
+  color:#666;
+}
+  a:hover{
+    color:#999;
+  }
+p{
+  line-height: 2em;
+  margin:0 0 20px;
+  text-align: center;
+}
+.endmark{color: #E0C044;}
+.wrap{
+  max-width: 70%;
+  margin:50px auto;
+}
+#typed {color: #E0C044;}
+.type-wrap{
+  margin:10px auto;
+  padding:20px;
+  background:#f0f0f0;
+  border-radius:5px;
+  border:#CCC 1px solid;
+}
+
+.links{
+  margin:20px 0;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+h1 {font-family: 'Ubuntu Mono'; font-weight: normal; font-size: 40px; line-height:80px; color: #fff; letter-spacing: 1px;}
+h2 {font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing:1px;color: #FF9702;}
+h2 span:first-child {color: #89D402;}
+h2 span {color: #FFF;}
+h3 {padding: 20px 0 20px 30px; color:#fff;font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing: 0.75px;}
+p, li, input {font-family: 'Ubuntu Mono'; font-weight: normal; letter-spacing: 0.5px; font-size: 18px; line-height: 28px; text-align: left; position: relative; }
+p strong{font-weight: normal;font-style: italic;}
+p a {color: #ccc; transition:0.5s all;-webkit-transition:0.5s all; padding-bottom: 2px;
+  border-bottom: 2px solid #ccc;}
+p a:hover{color:#E0C044;}
+.var {font-style: italic; color: #54D9F1;}
+.with {color: #1DF772;}
+.white {color:#fff;}
+
+
+.social-icons {
+  display: inline-block;
+  text-align: center;
+  float: right;
+  position: relative;
+  top: -80px;
+}
+
+.icon-link {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin: 0 6px;
+  display: inline-block;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  fill: #eee;
+}
+
+.icon-hover {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  clip-path: circle(0px at center);
+  -webkit-clip-path: circle(0px at center);
+  fill: #E0C044;
+  transition: 1s ease;
+}
+.icon-hover:hover {
+  clip-path: circle(100% at center);
+  -webkit-clip-path: circle(100% at center);
+}
+
+
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: .5s;
+  animation-delay: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.fadeIn2 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1.25s;
+  animation-delay: 1.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.fadeIn3 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+.fadeIn4 {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.inivisble {
+  color: #232323;
+}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="h1  fadeIn">_jesseAbramson</h1>
+    <div class="social-icons  fadeIn">
+      <a href="http://ca.linkedin.com/in/jesseAbramson" class="icon-link">
+        <svg class="icon icon-linkedin">
+          <use xlink:href="#icon-linkedin"></use>
+        </svg>
+        <svg class="icon-hover icon-linkedin">
+          <use xlink:href="#icon-linkedin"></use>
+        </svg>
+      </a>
+      <a href="https://twitter.com/_jesseAbramson" class="icon-link">
+        <svg class="icon icon-twitter">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+        <svg class="icon-hover icon-twitter">
+          <use xlink:href="#icon-twitter"></use>
+        </svg>
+      </a>
+      <a href="http://codepen.io/_jesseabramson" class="icon-link">
+        <svg class="icon icon-codepen">
+           <use xlink:href="#icon-codepen"></use>
+        </svg>
+        <svg class="icon-hover icon-codepen">
+          <use xlink:href="#icon-codepen"></use>
+        </svg>
+      </a>
+      <a href="https://github.com/jrabramson" class="icon-link">
+        <svg class="icon icon-github">
+           <use xlink:href="#icon-github"></use>
+        </svg>
+        <svg class="icon-hover icon-github">
+          <use xlink:href="#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+
+    <svg width="0" height="0">
+    <symbol id="icon-twitter" viewBox="0 0 1024 1024">
+      <title>twitter</title>
+      <path class="path1" d="M1024 194.418c-37.676 16.708-78.164 28.002-120.66 33.080 43.372-26 76.686-67.17 92.372-116.23-40.596 24.078-85.556 41.56-133.41 50.98-38.32-40.83-92.922-66.34-153.346-66.34-116.022 0-210.088 94.058-210.088 210.078 0 16.466 1.858 32.5 5.44 47.878-174.6-8.764-329.402-92.4-433.018-219.506-18.084 31.028-28.446 67.116-28.446 105.618 0 72.888 37.088 137.192 93.46 174.866-34.438-1.092-66.832-10.542-95.154-26.278-0.020 0.876-0.020 1.756-0.020 2.642 0 101.788 72.418 186.696 168.522 206-17.626 4.8-36.188 7.372-55.348 7.372-13.538 0-26.698-1.32-39.528-3.772 26.736 83.46 104.32 144.206 196.252 145.896-71.9 56.35-162.486 89.934-260.916 89.934-16.958 0-33.68-0.994-50.116-2.94 92.972 59.61 203.402 94.394 322.042 94.394 386.422 0 597.736-320.124 597.736-597.744 0-9.108-0.206-18.168-0.61-27.18 41.056-29.62 76.672-66.62 104.836-108.748z"></path>
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 1024 1024">
+      <title>github</title>
+      <path class="path1" d="M512 0c-282.77 0-512 229.23-512 512s229.23 512 512 512 512-229.23 512-512-229.23-512-512-512zM816.056 816.056c-39.518 39.516-85.512 70.532-136.708 92.186-13.006 5.5-26.214 10.328-39.6 14.492v-76.734c0-40.334-13.834-70-41.5-89 17.334-1.666 33.25-4 47.75-7s29.834-7.334 46-13 30.666-12.416 43.5-20.25 25.166-18 37-30.5 21.75-26.666 29.75-42.5 14.334-34.834 19-57 7-46.584 7-73.25c0-51.666-16.834-95.666-50.5-132 15.334-40 13.666-83.5-5-130.5l-12.5-1.5c-8.666-1-24.25 2.666-46.75 11s-47.75 22-75.75 41c-39.666-11-80.834-16.5-123.5-16.5-43 0-84 5.5-123 16.5-17.666-12-34.416-21.916-50.25-29.75s-28.5-13.166-38-16-18.334-4.584-26.5-5.25-13.416-0.834-15.75-0.5-4 0.666-5 1c-18.666 47.334-20.334 90.834-5 130.5-33.666 36.334-50.5 80.334-50.5 132 0 26.666 2.334 51.084 7 73.25s11 41.166 19 57 17.916 30 29.75 42.5 24.166 22.666 37 30.5 27.334 14.584 43.5 20.25 31.5 10 46 13 30.416 5.334 47.75 7c-27.334 18.666-41 48.334-41 89v78.23c-15.098-4.494-29.98-9.804-44.6-15.988-51.194-21.654-97.188-52.67-136.706-92.186-39.516-39.518-70.534-85.512-92.186-136.708-22.398-52.958-33.756-109.262-33.756-167.348s11.358-114.39 33.758-167.35c21.654-51.194 52.67-97.188 92.186-136.706s85.512-70.534 136.706-92.186c52.96-22.4 109.264-33.758 167.35-33.758s114.39 11.358 167.35 33.758c51.196 21.654 97.19 52.67 136.708 92.186 39.516 39.516 70.532 85.512 92.186 136.706 22.398 52.96 33.756 109.264 33.756 167.35s-11.358 114.39-33.758 167.35c-21.654 51.194-52.67 97.19-92.186 136.706z"></path>
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 1024 1024">
+      <title>linkedin2</title>
+      <path class="path1" d="M384 384h177.106v90.782h2.532c24.64-44.194 84.958-90.782 174.842-90.782 186.946 0 221.52 116.376 221.52 267.734v308.266h-184.61v-273.278c0-65.184-1.334-149.026-96.028-149.026-96.148 0-110.82 70.986-110.82 144.292v278.012h-184.542v-576z"></path>
+      <path class="path2" d="M64 384h192v576h-192v-576z"></path>
+      <path class="path3" d="M256 224c0 53.019-42.981 96-96 96s-96-42.981-96-96c0-53.019 42.981-96 96-96s96 42.981 96 96z"></path>
+    </symbol>
+    <symbol id="icon-codepen" viewBox="0 0 1024 1024">
+      <title>codepen</title>
+      <path class="path1" d="M945.75 368.042l-448-298.666c-10.748-7.166-24.752-7.166-35.5 0l-448 298.666c-8.902 5.934-14.25 15.926-14.25 26.624v298.666c0 10.7 5.348 20.692 14.25 26.624l448 298.666c5.374 3.584 11.562 5.376 17.75 5.376s12.376-1.792 17.75-5.376l448-298.666c8.902-5.934 14.25-15.926 14.25-26.624v-298.666c0-10.698-5.348-20.69-14.25-26.624zM480 654.876l-166.312-110.876 166.312-110.874 166.312 110.874-166.312 110.876zM512 377.542v-221.75l358.31 238.876-166.31 110.874-192-128zM448 377.542l-192 128-166.312-110.874 358.312-238.876v221.75zM198.312 544l-134.312 89.542v-179.082l134.312 89.54zM256 582.458l192 128v221.748l-358.312-238.872 166.312-110.876zM512 710.458l192-128 166.312 110.876-358.312 238.874v-221.75zM761.688 544l134.312-89.54v179.084l-134.312-89.544z"></path>
+    </symbol>
+    </svg>]
+    <div id="main"></div>
+  </main>
+  <!-- <script src="./static/bundle.js"></script> -->
+</body>
+</html>
