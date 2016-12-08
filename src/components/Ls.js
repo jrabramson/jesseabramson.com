@@ -2,7 +2,6 @@ import React, { Component, createFragment } from 'react';
 import { connect } from 'react-redux';
 import styles from '../app.scss';
 import { showDir } from './dirMap';
-import { keys } from 'lodash';
 import { map } from 'lodash';
 
 class Ls extends Component {
@@ -13,19 +12,19 @@ class Ls extends Component {
     )
   }
   _dir(current) {
-  	const available = showDir(current).map(dir => {
+  	const available = map(showDir(current), (contents, dir) => {
       return (
-        <li key={dir[0]}>{this._pathing(dir)}</li>
+        <li key={dir}>{this._pathing(contents, dir)}</li>
       )
     });
    return available;
   }
-  _pathing(dir) {
-    switch (typeof dir[1]) {
+  _pathing(contents, dir) {
+    switch (typeof contents) {
       case 'string':
-        return <span className={styles.file}>{`${dir[0]}.${dir[1]}`}</span>
+        return <span className={styles.file}>{`${dir}.${contents}`}</span>
       case 'object':
-        return <span className={styles.dir}>{dir[0]}</span>
+        return <span className={styles.contents}>{dir}</span>
     }
   }
 }

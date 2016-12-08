@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { keys } from 'lodash';
 
 let files = {
   'love.jpg': require('./assets/love.jpg'),
@@ -14,8 +13,8 @@ let files = {
   'skills.txt': require('./assets/skills.txt'),
   'passion.txt': require('./assets/passion.txt'),
   'art.txt': require('./assets/art.txt'),
-  'prdio.com': 'http://www.prdio.com',
-  'twitter.com': 'https://twitter.com/_jesseAbramson',
+  'prdio.repo': 'https://github.com/jrabramson/Prdio/',
+  'hexes.repo': 'https://github.com/jrabramson/hexes/'
 };
 
 export function getFile(name) {

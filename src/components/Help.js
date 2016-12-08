@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import styles from '../app.scss';
-import { keys, values, zip } from 'lodash';
+import { map } from 'lodash';
 
 class Help extends Component {
   render() {
@@ -16,17 +16,13 @@ class Help extends Component {
         <li key={method}>{params} {commandTip(params)}</li>
       )
     }
-  	return listCommands().map(command => {
+    return map(tooltips, (tooltip, command) => {
   		return (
-  			<li key={command}>{command}</li>
+  			<li key={command}>{command + tooltip}</li>
   		)
   	});
   }
 }
-
-function listCommands() {
-  return zip(keys(tooltips), values(tooltips));
-};
 
 function commandTip(command) {
   return tooltips[command] || ' - no commands found';

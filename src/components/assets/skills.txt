@@ -1,7 +1,5 @@
-Back End    Front End
- PHP		 CSS5
- Ruby		 JS
- Python		  - Meteor
- Node		  - React [reflux/redux]
- Java		  - Angular
- C#  		  
+ PHP - CodeIgnitor/Wordpress
+ Ruby - Rails/Sinatra/Hanami
+ JavaScript - Node/React/Redux/Meteor
+ Java
+ C/C# - UnityScript

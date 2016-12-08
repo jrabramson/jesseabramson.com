@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { keys } from 'lodash';
-import { values } from 'lodash';
-import { zip } from 'lodash';
+import { keys, values, zip } from 'lodash';
 
-let structure = require('../../api/structure.json')
+let structure = require('../../data/structure.json')
 
 export function showDir(current) {
 	const dir = breakdown(current);
-	return zip(keys(fetch(dir)), values(fetch(dir)));
+	return fetch(dir);
 };
 
 export function changeDir(param, current) {
